@@ -1,13 +1,51 @@
 {
   "age": {
     "Description": "Age at recording",
-    "Units": "years"
+    "Units": "years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "sex": {
     "Description": "Biological sex",
     "Levels": {
       "M": "male",
       "F": "female"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "F": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "M": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "handedness": {
@@ -28,7 +66,27 @@
   },
   "fsiq": {
     "Description": "Full Scale IQ",
-    "Units": "standard score"
+    "Units": "standard score",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Assessment",
+        "Label": "Assessment Tool"
+      },
+      "VariableType": "Collection",
+      "IsPartOf": {
+        "TermURL": "snomed:621131000124106",
+        "Label": "Wechsler Adult Intelligence Scale fourth edition"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "srs2_total_t": {
     "Description": "SRS-2 Total T score",
@@ -36,7 +94,27 @@
   },
   "mabc_total_ss": {
     "Description": "MABC Total Standard Score",
-    "Units": "standard score"
+    "Units": "standard score",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Assessment",
+        "Label": "Assessment Tool"
+      },
+      "VariableType": "Collection",
+      "IsPartOf": {
+        "TermURL": "snomed:725886007",
+        "Label": "Movement Assessment Battery for Children Second Edition"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "cpt_response_style": {
     "Description": "CPT Response Style",
@@ -49,5 +127,15 @@
   "medication": {
     "Description": "Current medications at time of recording",
     "Levels": "Free text; separate items with commas if multiple"
+  },
+  "participant_id": {
+    "Description": "",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   }
 }
